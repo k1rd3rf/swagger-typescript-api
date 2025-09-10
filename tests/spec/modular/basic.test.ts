@@ -28,9 +28,12 @@ describe("basic", async () => {
       encoding: "utf8",
     });
 
-    const dataContracts = await fs.readFile(path.join(tmpdir, "data-contracts.ts"), {
-      encoding: "utf8",
-    });
+    const dataContracts = await fs.readFile(
+      path.join(tmpdir, "data-contracts.ts"),
+      {
+        encoding: "utf8",
+      },
+    );
 
     expect(api).toMatchSnapshot("api");
     expect(dataContracts).toMatchSnapshot("dataContracts");
