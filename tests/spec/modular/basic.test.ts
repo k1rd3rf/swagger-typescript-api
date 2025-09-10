@@ -21,7 +21,6 @@ describe("basic", async () => {
       input: path.resolve(import.meta.dirname, "schema.json"),
       output: tmpdir,
       silent: true,
-      // @ts-expect-error: fixed in 13.2.8
       modular: true,
     });
 
